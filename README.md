@@ -1,16 +1,19 @@
-Problem Statement: 
+Problem Statement:
+
 Given a BST satisfying 2 properties:
 (i) Nodes just have distinct integers
 (ii) This tree will not be balanced.
 Given such a BST, we need to find all the sequences of the integers that are in the node.
 
 Test Cases:
+
 (i)[6,4,7,3,5,8]
+     
      6
-   / \
-  4   7 
- / \   \
-3   5   8
+    / \
+    4   7 
+    / \   \
+    3   5   8
 
 
 [[6, 4, 7, 3, 5, 8], 
@@ -37,16 +40,17 @@ Test Cases:
 
 
 (ii) [2,1,3] 
+
     2
-   / \
-  1   3
+    / \
+    1   3
   
 o/p sequences:
 [2,1,3], [2,3,1]
 
 
 Methodology/logic: 
-Consider:
+
 (i)	The parent should always come before its children, with this order preserved we can get a list of viable solutions.
 (ii)	And, at every level of the tree, we will have certain choices which we can make as follows:
 At first, we pick up the root node and let’s say it has only one or no child then our choice will expand by adding that one child or nothing otherwise, if the root node has 2 children,
