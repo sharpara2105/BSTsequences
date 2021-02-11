@@ -5,7 +5,7 @@ Given a BST satisfying 2 properties:
 Given such a BST, we need to find all the sequences of the integers that are in the node.
 
 Test Cases:
-(i)
+(i)[6,4,7,3,5,8]
      6
    / \
   4   7 
@@ -36,7 +36,7 @@ Test Cases:
 
 
 
-(ii) 
+(ii) [2,1,3] 
     2
    / \
   1   3
