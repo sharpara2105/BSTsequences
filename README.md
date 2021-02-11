@@ -55,11 +55,13 @@ Methodology/logic:
 (ii)	And, at every level of the tree, we will have certain choices which we can make as follows:
 At first, we pick up the root node and let’s say it has only one or no child then our choice will expand by adding that one child or nothing otherwise, if the root node has 2 children,
 we have a choice to select either of the children (left/right). 
+
 case 1:
 
 (if we choose left child, then explore/get the children of the left child) 
 If left child is not a leaf node
 then our choices will expand to (root's right child) or (root's left child's children) 
+
 case2:
 
 (if we choose right child, then explore/get the children of the right child)
