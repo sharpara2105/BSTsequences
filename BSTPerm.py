@@ -11,14 +11,17 @@ def sequenceHelper(array, currentSol, resultantSolution):
 
             """ now our choices array (newArray) will expand because we can add the children of this removed node(node[i]) [if exists] 
             (newArray = remaining elements after removing node[i] and children of the removed node) """
+            
             if array[i].left:
                 newArray.append(array[i].left)
             if array[i].right:
                 newArray.append(array[i].right)
+                
             """ since, we now have elements that can be a viable solution,
             call recursively the function to get all the permutations with this 
             newArray formed and subsequently we will append all the output sequences 
             in the resultantSolution's array """
+            
             sequenceHelper(newArray, newSol, resultantSolution)
 
 
@@ -82,45 +85,4 @@ root.right.right = Node(8)
 
 print(generateSequences(root))
 
-""" Rough work:
-
-# def permutationHelper(array,currentSol,resultantSolution):
-#     if not len(array) and len(currentSol):
-#         resultantSolution.append(currentSol)
-#     else:
-#         for i in range(len(array)):
-#             newArray = array[:i] + array[i+1:]
-#             newSol= currentSol+[array[i]]
-#             permutationHelper(newArray,newSol,resultantSolution)
-
-
-# def getPermutations(array):
-#     permutations=[]
-#     permutationHelper(array,[],permutations)
-#     return permutations
-#
-# print(getPermutations([1,2,3]))
-
-
-# def permutationHelper(q,sol,resultant_solution):
-#     if len(q)==0:
-#         resultant_solution.append(sol)
-#     new_solution= sol
-#     for i in range(len(q)):
-#         for j in range(i,len(q)):
-#             temp = []
-#             q[i],q[j]=q[j],q[i]   #swap
-#             for index in range(1,len(q)):
-#                 temp.append(q[index])
-#             #process the first element for its children:
-#             if q[0].left:
-#                 temp.append(q[0].left)
-#             if q[0].right:
-#                 temp.append(q[0].right)
-#             new_solution.append(q[0].value)
-#
-#             permutationHelper(temp,new_solution,resultant_solution)
-#             # sol.pop() #undo the solution created
-#             q[i],q[j]=q[j],q[i]   #undo the swap
-"""
 
